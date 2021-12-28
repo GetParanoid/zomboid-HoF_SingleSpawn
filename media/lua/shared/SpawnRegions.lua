@@ -65,27 +65,16 @@ end
 function SpawnRegionMgr.getSpawnRegionsAux()
 	if getWorld():getGameMode() == "Multiplayer" then
 		if isServer() then
-			local filename = getServerName() .. "_spawnregions.lua"
-			if serverFileExists(filename) then
-				return SpawnRegionMgr.loadSpawnRegionsFile(filename, true)
-			else
-				-- fall through, load the map's spawnregions.lua or spawnpoints.lua file
-			end
+			local regions = SpawnRegions()
+			return SpawnRegionMgr.loadSpawnRegions(regions)
 		end
 		if isClient() then
-			return getServerSpawnRegions()
+			local regions = SpawnRegions()
+			return SpawnRegionMgr.loadSpawnRegions(regions)
 		end
 	end
-	local MAPNAME = getWorld():getMap()
-	if not MAPNAME:contains(";") and fileExists('media/maps/'..MAPNAME..'/spawnregions.lua') then
-		return SpawnRegionMgr.loadSpawnRegionsFile('media/maps/'..MAPNAME..'/spawnregions.lua')
-	else
---		local regions = {
---			{ name = MAPNAME, file = 'media/maps/'..MAPNAME..'/spawnpoints.lua' }
---		}
-		local regions = createRegionFile();
-		return SpawnRegionMgr.loadSpawnRegions(regions)
-	end
+	local regions = SpawnRegions()
+	return SpawnRegionMgr.loadSpawnRegions(regions)
 end
 
 function SpawnRegionMgr.getSpawnRegions()
@@ -94,4 +83,17 @@ function SpawnRegionMgr.getSpawnRegions()
 		triggerEvent("OnSpawnRegionsLoaded", regions)
 	end
 	return regions
+end
+
+
+
+function SpawnRegions()
+    return {
+        -- { name = "Muldraugh, KY", file = "media/maps/Muldraugh, KY/spawnpoints.lua" },
+        -- { name = "West Point, KY", file = "media/maps/West Point, KY/spawnpoints.lua" },
+        -- { name = "Rosewood, KY", file = "media/maps/Rosewood, KY/spawnpoints.lua" },
+        { name = "Riverside, KY", file = "media/maps/Riverside, KY/spawnpoints.lua" },
+        -- Uncomment the line below to add a custom spawnpoint for this server.
+        -- { name = "Twiggy's Bar", serverfile = "servertest_spawnpoints.lua" },
+    }
 end
