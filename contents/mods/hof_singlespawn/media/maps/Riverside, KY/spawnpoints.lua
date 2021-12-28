@@ -75,7 +75,7 @@ function SpawnPoints()
         { worldX = 19, worldY = 17, posX = 79, posY = 258, posZ = 0 },
         { worldX = 21, worldY = 18, posX = 51, posY = 20, posZ = 0 },
         { worldX = 19, worldY = 18, posX = 260, posY = 23, posZ = 0 }
-      }
+      },
       chef = {
         { worldX = 21, worldY = 18, posX = 227, posY = 31, posZ = 0 },
         { worldX = 22, worldY = 17, posX = 115, posY = 231, posZ = 0 },
@@ -168,7 +168,7 @@ function SpawnPoints()
         { worldX = 22, worldY = 18, posX = 162, posY = 42, posZ = 0 },
         { worldX = 20, worldY = 17, posX = 277, posY = 208, posZ = 0 },
         { worldX = 22, worldY = 17, posX = 136, posY = 143, posZ = 0 },
-        { worldX = 20, worldY = 17, posX = 71, posY = 223, posZ = 0 }
+        { worldX = 20, worldY = 17, posX = 71, posY = 223, posZ = 0 },
         { worldX = 21, worldY = 18, posX = 67, posY = 184, posZ = 0 },
       },
       metalworker = {
