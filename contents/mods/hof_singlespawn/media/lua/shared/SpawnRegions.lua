@@ -1,7 +1,3 @@
---***********************************************************
---**                    THE INDIE STONE                    **
---***********************************************************
-
 SpawnRegionMgr = {}
 
 function SpawnRegionMgr.loadSpawnPointsFile(filename, server)
@@ -44,7 +40,6 @@ end
 
 function SpawnRegionMgr.loadSpawnRegions(regions)
 	local valid = {}
-	-- add rosewood if needed
 	for _,region in ipairs(regions) do
 		if region.file then
 			region.points = SpawnRegionMgr.loadSpawnPointsFile(region.file, false)
@@ -52,11 +47,9 @@ function SpawnRegionMgr.loadSpawnRegions(regions)
 			region.points = SpawnRegionMgr.loadSpawnPointsFile(region.serverfile, true)
 		end
 		if region.name and region.points then
-            --print(region.name);
 			table.insert(valid, region)
 			local count = 0
 			for k,v in pairs(region.points) do count = count + 1 end
---			print('spawn region '..region.name..' has '..count..' professions')
         end
     end
 	return valid
@@ -89,11 +82,6 @@ end
 
 function SpawnRegions()
     return {
-        -- { name = "Muldraugh, KY", file = "media/maps/Muldraugh, KY/spawnpoints.lua" },
-        -- { name = "West Point, KY", file = "media/maps/West Point, KY/spawnpoints.lua" },
-        -- { name = "Rosewood, KY", file = "media/maps/Rosewood, KY/spawnpoints.lua" },
         { name = "Riverside, KY", file = "media/maps/Riverside, KY/spawnpoints.lua" },
-        -- Uncomment the line below to add a custom spawnpoint for this server.
-        -- { name = "Twiggy's Bar", serverfile = "servertest_spawnpoints.lua" },
     }
 end
