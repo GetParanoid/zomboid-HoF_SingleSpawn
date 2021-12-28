@@ -175,14 +175,14 @@ function SpawnPoints()
         { worldX = 19, worldY = 18, posX = 265, posY = 24, posZ = 0 },
         { worldX = 21, worldY = 18, posX = 139, posY = 23, posZ = 0 },
         { worldX = 21, worldY = 17, posX = 277, posY = 269, posZ = 0 },
-        { worldX = 22, worldY = 17, posX = 139, posY = 229, posZ = 0 }
+        { worldX = 22, worldY = 17, posX = 139, posY = 229, posZ = 0 },
         { worldX = 22, worldY = 17, posX = 137, posY = 143, posZ = 0 },
       },
       mechanic = {
         { worldX = 20, worldY = 17, posX = 76, posY = 247, posZ = 0 },
         { worldX = 21, worldY = 18, posX = 34, posY = 87, posZ = 0 },
         { worldX = 21, worldY = 18, posX = 205, posY = 144, posZ = 0 },
-        { worldX = 22, worldY = 18, posX = 57, posY = 122, posZ = 0 }
+        { worldX = 22, worldY = 18, posX = 57, posY = 122, posZ = 0 },
         { worldX = 21, worldY = 17, posX = 40, posY = 158, posZ = 0 },
       },
       unemployed = {
