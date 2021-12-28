@@ -1,0 +1,5 @@
+version=1
+title=Riverside Single Spawn
+description=Allows players to only spawn in Riverside
+tags=Build 41, Multiplayer
+visibility=public
